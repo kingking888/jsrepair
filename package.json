@@ -2,7 +2,7 @@
   "name": "etacsufbo",
   "version": "0.0.0",
   "description": "A simple deobfuscator",
-  "main": "module.js",
+  "main": "lib/deobfuscator.js",
   "directories": {
     "test": "tests"
   },
