@@ -3,7 +3,9 @@
 'use strict';
 
 const fs = require('fs');
-const colors = require('colors');
+
+require('colors');
+
 const deobfuscator = require('./');
 
 // run as a command line tool

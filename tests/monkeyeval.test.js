@@ -9,4 +9,6 @@ var sample = function(fileName) {
   return fs.readFileSync(fullName).toString('utf8');
 };
 
+monkeyEval.on('exec', console.log);
 monkeyEval.run(sample('jsfuck'));
+monkeyEval.run(sample('aaencode'));
