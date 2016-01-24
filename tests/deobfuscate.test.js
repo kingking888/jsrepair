@@ -4,16 +4,23 @@ const expect = require('chai').expect;
 
 const deobfuscator = require('../');
 const sample = require('./cases').sample;
+const simplify = file => deobfuscator.clean(sample(file));
 
-describe('jsobfuscate', function() {
-  it('should evaluate literals', function(done) {
-    let code = sample('jsobfuscator.com');
-    let simplified = deobfuscator.clean(code);
-    expect(simplified).to.be.not.empty;
+describe('jsobfuscate', () => {
+  it('should evaluate literals', done => {
+    expect(simplify('jsobfuscator.com')).to.be.not.empty;
     done();
   });
 });
 
-describe('expression_expand', function() {
+describe('expression', () => {
+  it('should simplify expressions', done => {
+    expect(simplify('expressions')).to.be.not.empty;
+    done();
+  });
 
+  it('should evaluate member method', done => {
+    expect(simplify('functions')).to.be.not.empty;
+    done();
+  })
 });

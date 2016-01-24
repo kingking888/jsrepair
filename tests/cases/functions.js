@@ -10,3 +10,4 @@ var fromASCII = String.fromCharCode(32, 97, 46, 34, 0x27);
 var fromBase64 = atob(['a', 'G', 'V', 's', 'b', 'G', '8', 'g', 
   'd', '2', '9', 'y', 'b', 'G', 'Q', '='].join(''));
 var big = 'hello, world'.split('').reverse().join('').big();
+var toBase64 = btoa('aaaaaa');
