@@ -1,4 +1,5 @@
 # etacsufbo 
+[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 [![Build Status](https://travis-ci.org/ChiChou/etacsufbo.svg?branch=master)](https://travis-ci.org/ChiChou/etacsufbo)
 [![Coverage Status](https://coveralls.io/repos/github/ChiChou/etacsufbo/badge.svg?branch=master)](https://coveralls.io/github/ChiChou/etacsufbo?branch=master)
 
