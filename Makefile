@@ -1,6 +1,6 @@
 TESTS = tests/*.js
 REPORTER = spec
-HARMONY = node --harmony --harmony_arrow_functions
+HARMONY = node --harmony
 TIMEOUT = 20000
 ISTANBUL = $(HARMONY) ./node_modules/istanbul/lib/cli.js
 MOCHA = ./node_modules/mocha/bin/_mocha
