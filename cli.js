@@ -19,6 +19,7 @@ if ([3, 4].indexOf(process.argv.length) > -1) {
   let dst = process.argv[3];
 
   let code = fs.readFileSync(src).toString('utf8');
+  code = deobfuscator.clean(code);
   if (dst)
     fs.writeFile(dst, code);
   else
