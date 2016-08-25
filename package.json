@@ -1,6 +1,6 @@
 {
   "name": "etacsufbo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple deobfuscator",
   "main": "index.js",
   "directories": {
@@ -21,7 +21,10 @@
     "beautify",
     "javascript"
   ],
-  "author": "ChiChou <chichou@ujs.edu.cn>",
+  "engines" : {
+    "node" : ">4.0"
+  },
+  "author": "ChiChou <zhi.zhou@chaitin.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ChiChou/etacsufbo/issues"

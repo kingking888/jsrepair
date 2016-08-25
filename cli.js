@@ -1,9 +1,9 @@
-#!/usr/bin/env node --harmony --harmony_arrow_functions
+#!/usr/bin/env node
 
 'use strict';
 
 const fs = require('fs');
-
+const readline = require('readline');
 require('colors');
 
 const deobfuscator = require('./');
@@ -11,8 +11,8 @@ const deobfuscator = require('./');
 // run as a command line tool
 //
 // Usage:
-//   node deobfuscator.js input [output]
-// 
+//   node cli.js input [output]
+//
 
 if ([3, 4].indexOf(process.argv.length) > -1) {
   let src = process.argv[2];
@@ -26,19 +26,24 @@ if ([3, 4].indexOf(process.argv.length) > -1) {
     console.log(code.green);
 
 } else if (process.argv.length === 2) {
-  process.stdin.setEncoding('utf8');
-  process.stdin.on('readable', function() {
-    var chunk = process.stdin.read();
-    if (chunk && chunk.length) {
-      try {
-        console.log(deobfuscator.clean(chunk).green);
-      } catch (ex) {
-        if (ex.lineNumber && ex.column) {
-          console.log(`Error: ${ex.description} at line ${ex.lineNumber}, col ${ex.column}`.red);  
-        }
+  const rl = readline.createInterface({input: process.stdin, output: process.stdout});
+  rl.setPrompt('deobfuscate> ');
+  rl.prompt();
+
+  rl.on('line', function(line) {
+    try {
+      console.log(deobfuscator.clean(line).green);
+    } catch (ex) {
+      if (ex.lineNumber && ex.column) {
+        console.log(`Error: ${ex.description} at line ${ex.lineNumber}, col ${ex.column}`.red);
       }
     }
-    process.stdout.write('> ');
+    rl.prompt();
+  }).on('close', function() {
+    console.log('\nbye');
+    process.exit(0);
   });
+
+  process.stdin.setEncoding('utf8');
 }
 
