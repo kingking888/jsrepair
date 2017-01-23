@@ -7,6 +7,8 @@
 
 一个简易 Javascript 反混淆工具，基于抽象语法树分析和修改实现。
 
+** 注意：此项目包含真实恶意程序样本，可能会引起安全软件报告。**
+
 ## 快速上手
 
 `git clone https://github.com/ChiChou/etacsufbo.git` 下载项目
