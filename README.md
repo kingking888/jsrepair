@@ -1,3 +1,7 @@
+#jsRepair 修改自etacsufbo，原项目介绍见 https://github.com/ChiChou/etacsufbo
+
+增加三目运算符合逗号表达式混淆的反解逻辑
+
 # etacsufbo 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 [![Build Status](https://travis-ci.org/ChiChou/etacsufbo.svg?branch=master)](https://travis-ci.org/ChiChou/etacsufbo)
