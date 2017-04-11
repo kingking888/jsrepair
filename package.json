@@ -40,7 +40,6 @@
   "dependencies": {
     "colors": "^1.1.2",
     "escodegen": "^1.6.1",
-    "esprima": "^2.4.1",
-    "estraverse": "^4.1.0"
+    "esprima": "^2.4.1"
   }
 }

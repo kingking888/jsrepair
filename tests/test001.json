@@ -1,0 +1,52 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "temp"
+      },
+      "params": [],
+      "defaults": [],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ReturnStatement",
+            "argument": {
+              "type": "SequenceExpression",
+              "expressions": [
+                {
+                  "type": "UpdateExpression",
+                  "operator": "++",
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "a"
+                  },
+                  "prefix": false
+                },
+                {
+                  "type": "UpdateExpression",
+                  "operator": "--",
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "b"
+                  },
+                  "prefix": false
+                },
+                {
+                  "type": "Identifier",
+                  "name": "c"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "generator": false,
+      "expression": false
+    }
+  ],
+  "sourceType": "script"
+}
