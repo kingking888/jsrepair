@@ -1,4 +1,4 @@
-#jsRepair 修改自etacsufbo，原项目介绍见 https://github.com/ChiChou/etacsufbo
+# jsRepair 修改自etacsufbo，原项目介绍见 https://github.com/ChiChou/etacsufbo
 
 增加三目运算符合逗号表达式混淆的反解逻辑
 
