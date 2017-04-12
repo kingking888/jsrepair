@@ -2,50 +2,85 @@
   "type": "Program",
   "body": [
     {
-      "type": "FunctionDeclaration",
-      "id": {
-        "type": "Identifier",
-        "name": "temp"
-      },
-      "params": [],
-      "defaults": [],
-      "body": {
-        "type": "BlockStatement",
-        "body": [
-          {
-            "type": "ReturnStatement",
-            "argument": {
-              "type": "SequenceExpression",
-              "expressions": [
-                {
-                  "type": "UpdateExpression",
-                  "operator": "++",
-                  "argument": {
-                    "type": "Identifier",
-                    "name": "a"
-                  },
-                  "prefix": false
-                },
-                {
-                  "type": "UpdateExpression",
-                  "operator": "--",
-                  "argument": {
-                    "type": "Identifier",
-                    "name": "b"
-                  },
-                  "prefix": false
-                },
-                {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "LogicalExpression",
+        "operator": "||",
+        "left": {
+          "type": "LogicalExpression",
+          "operator": "&&",
+          "left": {
+            "type": "BinaryExpression",
+            "operator": "==",
+            "left": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
                   "type": "Identifier",
-                  "name": "c"
+                  "name": "i"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "params"
                 }
-              ]
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "asyncType"
+              }
+            },
+            "right": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0"
+            }
+          },
+          "right": {
+            "type": "AssignmentExpression",
+            "operator": "=",
+            "left": {
+              "type": "Identifier",
+              "name": "m"
+            },
+            "right": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                  "type": "Identifier",
+                  "name": "i"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "params"
+                }
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "asyncType"
+              }
             }
           }
-        ]
-      },
-      "generator": false,
-      "expression": false
+        },
+        "right": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "a"
+          },
+          "right": {
+            "type": "Literal",
+            "value": 5,
+            "raw": "5"
+          }
+        }
+      }
     }
   ],
   "sourceType": "script"
